@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        fruits-container li {
+            color: rgb(0, 172, 157);
+        }
+
+        #fruits-title {
+            color: black;
+        }
+
+        .item-like {
+            color: dodgerblue;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Welcome to my Awesome Website</h1>
+    <main>
+        <section>
+            <h1>Awesome website</h1>
+            <ul>
+                <li class="item-like">Doom</li>
+                <li class="item-like">Doom DOM 1</li>
+                <li class="item-like">Doom DOM 2</li>
+                <li>Doom DOM 3</li>
+                <li>Doom 4</li>
+            </ul>
+        </section>
+        <section class="fruits-container">
+            <h1 id="fruits-title">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Orange</li>
+                <li>Mango</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="place-title">Place Where I like to visit</h1>
+            <ul>
+                <li>BOOM 1</li>
+                <li>BOOM 2</li>
+                <li>DOM</li>
+                <li>DOM de re baba</li>
+            </ul>
+        </section>
+    </main>
+    <h1>Hello, from HTML</h1>
+    <script src="dom.js"></script>
+    <script>
+        // Option-1: getElementsByTagName (কেম ইউজ করব)
+        const liCollections = document.getElementsByTagName('li');
+        // console.log(liCollections);
+
+        for (const li of liCollections) {
+            // console.log(li);
+            // console.log(li.innerText);
+        }
+
+        // Option-2: getElementById (প্রচুর  ইউজ করব)
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText = "Fruits changed by JS";
+
+        // Option-3: getElementsByClassName (প্রচুর  ইউজ করব)
+        const places = document.getElementsByClassName('item-like')
+        for (const place of places) {
+            // console.log(place.innerText);
+        }
+
+        // Option-4: querySelectorAll
+        const someLi = document.querySelectorAll('.fruits-container li');
+        for (const li of someLi) {
+            // console.log(li.innerText);
+        }
+
+        // Option-5: querySelector
+        const singleLi = document.querySelector('.fruits-container li');
+
+        console.log(singleLi.innerText);
+
+
+    </script>
+</body>
+
+</html>
