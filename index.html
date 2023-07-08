@@ -24,7 +24,7 @@
 
 <body>
     <h1>Welcome to my Awesome Website</h1>
-    <main>
+    <main id="main-container">
         <section>
             <h1>Awesome website</h1>
             <ul>
@@ -35,8 +35,8 @@
                 <li>Doom 4</li>
             </ul>
         </section>
-        <section class="fruits-container">
-            <h1 id="fruits-title">Fruits I like</h1>
+        <section class="fruits-container mango-container">
+            <h1 id="fruits-title" class="fruits-title fruits fv-fruits">Fruits I like</h1>
             <ul>
                 <li>Apple</li>
                 <li>Banana</li>
@@ -44,9 +44,9 @@
                 <li>Mango</li>
             </ul>
         </section>
-        <section>
+        <section id="places-container" class="large-text">
             <h1 id="place-title">Place Where I like to visit</h1>
-            <ul>
+            <ul id="places-list">
                 <li>BOOM 1</li>
                 <li>BOOM 2</li>
                 <li>DOM</li>
@@ -55,7 +55,9 @@
         </section>
     </main>
     <h1>Hello, from HTML</h1>
-    <script src="dom.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/append.js"></script>
+    <script src="js/styleInJs.js"></script>
     <script>
         // Option-1: getElementsByTagName (কেম ইউজ করব)
         const liCollections = document.getElementsByTagName('li');
@@ -84,8 +86,7 @@
 
         // Option-5: querySelector
         const singleLi = document.querySelector('.fruits-container li');
-
-        console.log(singleLi.innerText);
+        // console.log(singleLi.innerText);
 
 
     </script>

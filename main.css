@@ -1,3 +1,11 @@
 h1{
     color: rgb(226, 43, 150);
 }
+
+.text-align{
+    text-align: center;
+}
+
+.large-text{
+    font-size: 2em;
+}
